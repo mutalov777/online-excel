@@ -1,0 +1,46 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/online_excel
+    username: postgres
+    password: 2001
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+  messages:
+    always-use-message-format: true
+  security:
+    user:
+      name: admin
+      password: admin123
+
+service:
+  prop:
+    protocol: https
+    ip: localhost
+    port: 8080
+    url: online-excel-heroku.herokuapp.com
+
+api:
+  info:
+    title: Excel
+    description: nimadir yozamish kerak
+    version: 1.0
+    terms-of-service: https://unicorn.pdp.uz
+    contact-name: pdp.uz
+    contact-email: mutalov7777@gmail.com
+    contact-url: https://pdp.uz
+    license-name: Apache 2.0
+    license-url: https://www.apache.org/licenses/LICENSE-2.0.html
+
+springdoc:
+  swagger-ui:
+    path: swagger-ui
+  api-docs:
+    path: /api-docs
